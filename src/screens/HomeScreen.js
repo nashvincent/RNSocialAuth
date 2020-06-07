@@ -4,6 +4,7 @@ import {GoogleSignin} from '@react-native-community/google-signin';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import onGoogleButtonPress from '../services/Google';
+import onFacebookButtonPress from '../services/Facebook';
 
 const styles = StyleSheet.create({
   view: {
@@ -39,16 +40,22 @@ const styles = StyleSheet.create({
 const HomeScreen = props => {
   const handleGoogleAuth = () => {
     console.log('Google Auth in progress');
-    GoogleSignin.configure({
-      webClientId:
-        '92687980378-74jefeh5j5gcrbc2euublpoiu7j6jlb4.apps.googleusercontent.com',
-    });
     onGoogleButtonPress()
       .then(() => {
         console.log('Logged In');
         props.route.params.handleLogin();
       })
       .catch(error => console.log('Failed: ', error));
+  };
+
+  const handleFacebookAuth = () => {
+    console.log('Facebook Auth in progress');
+    onFacebookButtonPress()
+      .then(() => {
+        console.log('Logged In');
+        props.route.params.handleLogin();
+      })
+      .catch(error => console.log(error));
   };
 
   return (
@@ -60,7 +67,7 @@ const HomeScreen = props => {
             <Icon name="logo-google" size={75} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => console.log('Facebook')}>
+          <TouchableOpacity onPress={handleFacebookAuth}>
             <Icon name="logo-facebook" size={75} color="white" />
           </TouchableOpacity>
 

@@ -13,7 +13,6 @@ export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => setLoggedIn(true);
-
   const handleLogout = () => setLoggedIn(false);
 
   return (

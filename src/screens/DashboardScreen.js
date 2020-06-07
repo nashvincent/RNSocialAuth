@@ -5,7 +5,7 @@ import auth from '@react-native-firebase/auth';
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(224, 248, 255)',
     justifyContent: 'center',
     alignItems: 'center',
   },

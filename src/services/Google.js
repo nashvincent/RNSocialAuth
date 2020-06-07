@@ -1,14 +1,13 @@
 import {GoogleSignin} from '@react-native-community/google-signin';
 import auth from '@react-native-firebase/auth';
 
-// Apparently has to be done in componentDidMount?
-GoogleSignin.configure({
-  webClientId:
-    '92687980378-74jefeh5j5gcrbc2euublpoiu7j6jlb4.apps.googleusercontent.com',
-});
-
 async function onGoogleButtonPress() {
   console.log('Google Auth in progress');
+  GoogleSignin.configure({
+    webClientId:
+      '92687980378-74jefeh5j5gcrbc2euublpoiu7j6jlb4.apps.googleusercontent.com',
+  });
+
   let googleCredential;
 
   // Get the users ID token
