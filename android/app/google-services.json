@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "92687980378",
+    "firebase_url": "https://rnsocialauth-c1a00.firebaseio.com",
+    "project_id": "rnsocialauth-c1a00",
+    "storage_bucket": "rnsocialauth-c1a00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92687980378:android:6dc136d0e8533811964563",
+        "android_client_info": {
+          "package_name": "com.rnsocialauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92687980378-fo2nv259a9l8nq6pjm85h1kl8m5jdf70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rnsocialauth",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "92687980378-74jefeh5j5gcrbc2euublpoiu7j6jlb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF6gW9LSeqtzBCN8powcpAoXlu3lxR6oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92687980378-74jefeh5j5gcrbc2euublpoiu7j6jlb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
