@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler'; // Needs to be on top of the file according to React Navigation docs
+import 'react-native-gesture-handler'; // Needs to be on the top of the file according to React Navigation docs
 import React, {useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -6,6 +6,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './src/screens/HomeScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
 
+// TODO: Take care of the errors that is raised because of passing funcions as route props
+// Optional: use onAuthStateChanged to keep track of the users current authentication state
 console.disableYellowBox = true;
 const Stack = createStackNavigator();
 

@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import onGoogleButtonPress from '../services/Google';
 import onFacebookButtonPress from '../services/Facebook';
+import onTwitterButtonPress from '../services/Twitter';
 
 const styles = StyleSheet.create({
   view: {
@@ -58,6 +59,16 @@ const HomeScreen = props => {
       .catch(error => console.log(error));
   };
 
+  const handleTwitterAuth = () => {
+    console.log('Facebook Auth in progress');
+    onTwitterButtonPress()
+      .then(() => {
+        console.log('Logged In');
+        props.route.params.handleLogin();
+      })
+      .catch(error => console.log(error));
+  };
+
   return (
     <View style={styles.view}>
       <View style={styles.container}>
@@ -71,8 +82,8 @@ const HomeScreen = props => {
             <Icon name="logo-facebook" size={75} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => console.log('Github')}>
-            <Icon name="logo-github" size={75} color="white" />
+          <TouchableOpacity onPress={handleTwitterAuth}>
+            <Icon name="logo-twitter" size={75} color="white" />
           </TouchableOpacity>
         </View>
       </View>
